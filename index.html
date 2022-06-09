@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogalerie</title>
+    <link rel="shortcut icon" loading="lazy" href="./img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+
+<body onload="help(), backPage()" id="body">
+    <!-- header -->
+    <header>
+        <div class="mainMenu">
+            <h1 id="titleText">Fotos</h1>
+            <div class="selectMenu" id="selectMenu"></div>
+            <!-- <a href="#"><input type="text" placeholder="In meinen Fotos suchen"></a> -->
+        </div>
+    </header>
+    <!-- photoCard -->
+    <div class="photoCard">
+        <!-- selectmenu -->
+        <div class="selectmenu">
+            <a class="selectButton" id="marked1" onclick="backPage()" href="#">
+                <img loading="lazy" src="./img/backB.png">
+                <div class="menuTextNr">
+                    <h2>Fotos</h2>
+                    <h3 id="photoNr1">0</h3>
+                </div>
+            </a>
+            <a class="selectButton" id="marked2" onclick="favouritePage()" href="#">
+                <img loading="lazy" src="./img/faforitB.png">
+                <div class="menuTextNr">
+                    <h2>Favoriten</h2>
+                    <h3 id="photoNr2">0</h3>
+                </div>
+            </a>
+            <a class="selectButton" id="marked3" onclick="binPage()" href="#">
+                <img loading="lazy" src="./img/binB.png">
+                <div class="menuTextNr">
+                    <h2>Papierkorb</h2>
+                    <h3 id="photoNr3">0</h3>
+                </div>
+            </a>
+        </div>
+        <!-- photoOverview -->
+        <div class="photoOverview">
+            <div class="photos" id="photos"></div>
+        </div>
+
+        <div class="diabox" id="diabox"></div>
+    </div>
+
+    <div id="help" class="help d-none hide">
+        <div onclick="close2()" class="close">Schließen</div>
+        <h1>Bedienungsanleitung</h1>
+        <div class="helpTip">
+            <div class="tip">
+                <h2>Mehrere Bilder auswählen</h2>
+                <img src="./img/info1.png" loading="lazy">
+            </div>
+            <div class="tip">
+                <h2>Aktuelle Ansicht</h2>
+                <img src="./img/info2.png" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

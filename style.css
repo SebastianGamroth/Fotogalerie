@@ -1,0 +1,382 @@
+body {
+    margin: 0;
+    font-family: "MerriweatherSans";
+}
+
+h2,
+h3 {
+    font-weight: 100;
+    font-size: 16px;
+    color: #3c4043;
+}
+
+@font-face {
+    font-family: "MerriweatherSans";
+    src: url(./fonts/Merriweather_Sans/MerriweatherSans-VariableFont_wght.ttf);
+}
+
+/* header */
+header {
+    display: flex;
+    border-bottom: 1px solid gray;
+    height: 64px;
+}
+
+header h1 {
+    margin: 0px;
+    font-weight: 100;
+    font-size: 22px;
+    color: #3c4043;
+    /* margin-right: 12%; */
+}
+
+.mainMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0px 6px;
+}
+
+.mainMenu input {
+    border: hidden;
+    font-size: 16px;
+    background-color: rgb(241, 243, 244);
+    font-size: 16px;
+    padding: 14px;
+    border-radius: 6px;
+}
+
+/* photoCard */
+.photoCard {
+    display: flex;
+}
+
+/* selectmenu */
+/* .selectmenu {
+    margin: 0px 6px;
+    width: 300px;
+} */
+
+.selectButton {
+    display: flex;
+    align-items: center;
+    background-color: rgb(241, 243, 244);
+    border-radius: 0px 24px 24px 0px;
+    text-decoration: none;
+    color: black;
+    margin-top: 3px;
+    height: 46px;
+    width: 164px;
+}
+
+.menuTextNr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 116px;
+}
+
+.selectButton img {
+    height: 24px;
+    opacity: 0.7;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.selectButton h2 {
+    /* background-color: rgb(241, 243, 244);
+    border-radius: 0px 24px 24px 0px; */
+    padding: 10px 6px;
+    margin: 3px 3px 3px 0px;
+}
+
+.selectButton h3 {
+    display: flex;
+    justify-content: end;
+}
+
+.selectButton:hover {
+    background-color: rgb(229, 229, 229);
+}
+
+.marked {
+    background-color: hwb(270deg 20% 40% / 34%) !important;
+}
+
+/* photoOverview */
+
+.photoOverview {
+    width: 100%;
+}
+
+.photos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pictureFrame {
+    position: relative;
+}
+
+.currentPhoto {
+    height: 220px;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.mark {
+    position: absolute;
+    width: 30px;
+    left: 14px;
+    top: 14px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.mark:hover {
+    opacity: 1;
+}
+
+.markSelect {
+    background-color: red;
+    border-radius: 50%;
+}
+
+.currentPhoto mark:hover {
+    opacity: 1;
+}
+
+/* .currentPhoto img{
+    object-fit: cover;
+} */
+
+/* diabox */
+.diaShow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.selectMenu {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.selectIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.selectIcons img {
+    height: 24px;
+    opacity: 0.7;
+}
+
+.icon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    top: 12px;
+}
+
+.icon a,
+.selectIcons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(198 207 227 / 50%);
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    margin: 0px 16px;
+}
+
+.icon h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(198 207 227 / 50%);
+    border-radius: 8px;
+    width: 65px;
+    height: 46px;
+    color: white;
+}
+
+.selectIcons a:hover,
+.icon h2:hover,
+.icon a:hover,
+.diaRight a:hover,
+.diaLeft a:hover {
+    background-color: rgb(96 109 137);
+}
+
+.icon img {
+    height: 20px;
+    margin: 0px 12px 0px 12px;
+}
+
+/* testen */
+.diaPhoto {
+    max-width: 80vw;
+}
+
+.diaLeft {
+    position: absolute;
+    /* background-color: rgb(255 0 0 / 22%); */
+    z-index: 10;
+    left: 0;
+    width: 40%;
+    height: 100vh;
+    cursor: pointer;
+}
+
+.diaLeft a {
+    left: 16px !important;
+    transform: scaleX(-1) !important;
+}
+
+.diaRight {
+    position: absolute;
+    /* background-color: rgba(0, 21, 255, 0.22); */
+    z-index: 9;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    cursor: pointer;
+}
+
+.diaRight a,
+.diaLeft a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(198 207 227 / 50%);
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.hide {
+    overflow: hidden;
+}
+
+/* responsive */
+@media (max-width: 600px) {
+    .currentPhoto {
+        height: 140px;
+    }
+}
+
+/* help */
+.help {
+    overflow: auto;
+    background-color: #5264ccc7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.help h1 {
+    color: #393333;
+}
+
+.close {
+    cursor: pointer;
+    background-color: #e0e0e0;
+    margin: 32px;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.close:hover {
+    background-color: #a9a9a9;
+}
+
+.helpTip {
+    display: flex;
+    justify-content: space-around;
+}
+
+.help img {
+    height: 200px;
+    object-fit: contain;
+}
+
+.tip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    background-color: #e0e0e0;
+    border-radius: 16px;
+    margin: 16px;
+}
+
+@media (max-width: 1000px) {
+    .helpTip {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 520px) {
+    .help img {
+        height: 116px;
+    }
+
+    .selectButton {
+        width: 66px !important;
+    }
+
+    .selectButton h2 {
+        display: none;
+    }
+
+    .selectMenu {
+        width: 60%;
+    }
+
+    .selectIcons a,
+    .icon a {
+        margin: 0px 6px;
+    }
+
+    header {
+        height: 90px;
+    }
+
+    .mainMenu {
+        flex-direction: column-reverse;
+        margin: 6px 6px;
+    }
+}
+
+@media (max-width: 380px) {
+    .help h1 {
+        font-size: 24px;
+    }
+}
