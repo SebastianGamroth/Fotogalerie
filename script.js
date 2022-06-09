@@ -1,4 +1,4 @@
-let photosArray = ['01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg', '06.jpg', '07.jpg', '08.jpg', '09.jpg', '10.jpg', '11.jpg', '12.jpg'];
+let photosArray = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
 let photosFavourite = [];
 let photosBin = [];
 let photosSelect = [];
@@ -22,8 +22,8 @@ function loadPhotos(current) {
     for (let i = 0; i < current.length; i++) {
         photos.innerHTML += `
         <div class="pictureFrame" id="pictureFrame">
-            <img class="currentPhoto" id="photo" onclick="currentPhoto(${i})" loading="lazy" src="./img/${current[i]}">
-            <img id="mark${i}" class="mark" onclick="markSelection(${i})" loading="lazy" src="./img/task.png">
+            <img class="currentPhoto" id="photo" onclick="currentPhoto(${i})" src="./img/${current[i]}.webp">
+            <img id="mark${i}" class="mark" onclick="markSelection(${i})" src="./img/task.png">
         </div>
         `;
         photoNr();
@@ -40,18 +40,18 @@ function diaShow(i) {
     photo.innerHTML = `
         <div class="diaShow">
             <div class="icon">
-                <div onclick="backCurrent()"><a href="#"><img loading="lazy" src="./img/return.png"></a></div>
+                <div onclick="backCurrent()"><a href="#"><img src="./img/return.png"></a></div>
                 <!-- <H2>Fotos ${array.length}</H2> -->
-                <div id="favouriteHide" onclick="favourite(${i})"><a href="#"><img loading="lazy" src="./img/faforit.png"></a></div>
-                <div id="binHide" onclick="bin(${i})"><a href="#"><img loading="lazy" src="./img/bin.png"></a></div>
-                <div id="deleteBinHide" onclick="deleteBin(${i})"><a href="#"><img loading="lazy" src="./img/delete.png"></a></div>
+                <div id="favouriteHide" onclick="favourite(${i})"><a href="#"><img src="./img/faforit.png"></a></div>
+                <div id="binHide" onclick="bin(${i})"><a href="#"><img src="./img/bin.png"></a></div>
+                <div id="deleteBinHide" onclick="deleteBin(${i})"><a href="#"><img src="./img/delete.png"></a></div>
             </div>
             <div class="diaLeft" onclick="diaLeft(${i})">
-                <a href="#"><img loading="lazy" src="./img/arrow.png"></a>
+                <a href="#"><img src="./img/arrow.png"></a>
             </div>
-            <img loading="lazy" class="diaPhoto" id="pictureEnd" src="./img/${array[i]}">
+            <img class="diaPhoto" id="pictureEnd" src="./img/${array[i]}.webp">
             <div class="diaRight" onclick="diaRight(${i})">
-                <a href="#"><img loading="lazy" src="./img/arrow.png"></a>
+                <a href="#"><img src="./img/arrow.png"></a>
             </div>
         </div>
         `;
@@ -94,9 +94,9 @@ function photoSelection(i) {
 
     select.innerHTML = `
     <div class="selectIcons">
-        <a href="#"><img loading="lazy" onclick="favouriteSelector(${i})" src="./img/faforitB.png"></a>
-        <a href="#"><img loading="lazy" onclick="binSelector(${i})" src="./img/binB.png"></a>
-        <a href="#"><img loading="lazy" onclick="deleteBinSelector(${i})" src="./img/delete.png"></a>
+        <a href="#"><img onclick="favouriteSelector(${i})" src="./img/faforitB.png"></a>
+        <a href="#"><img onclick="binSelector(${i})" src="./img/binB.png"></a>
+        <a href="#"><img onclick="deleteBinSelector(${i})" src="./img/delete.png"></a>
     </div>
     `;
     photoNr();
